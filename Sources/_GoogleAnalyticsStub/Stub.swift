@@ -1,1 +1,1 @@
-improt GoogleAnalytics
+import GoogleAnalytics
