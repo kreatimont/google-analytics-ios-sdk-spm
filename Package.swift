@@ -3,22 +3,19 @@ import PackageDescription
 
 let package = Package(
     name: "GoogleAnalytics",
-    defaultLocalization: "en",
     platforms: [
-        .iOS(.v9),
-        .macOS(.v11),
-        .tvOS(.v14),
-        .watchOS(.v7)
+        .iOS(.v9), .macOS(.v11), .tvOS(.v14), .watchOS(.v7)
     ],
     products: [
-        .library(name: "GoogleAnalytics", targets: ["GoogleAnalytics"])
+        .library(name: "GoogleAnalytics", targets: ["GoogleAnalytics", "_GoogleAnalyticsStub"])
     ],
     dependencies: [],
     targets: [
         .binaryTarget(
             name: "GoogleAnalytics",
             path: "GoogleAnalytics.xcframework"
-        )
+        ),
+        .target(name: "_GoogleAnalyticsStub")
     ],
     swiftLanguageVersions: [.v5]
 )
