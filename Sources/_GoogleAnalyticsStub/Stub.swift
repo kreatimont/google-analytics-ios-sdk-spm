@@ -1,1 +1,1 @@
-import GoogleAnalytics
+class GoogleAnalyticsStub { }
